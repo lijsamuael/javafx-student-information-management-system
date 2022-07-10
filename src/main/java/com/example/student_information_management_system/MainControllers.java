@@ -66,7 +66,7 @@ public class MainControllers implements Initializable {
         t.play();
         t.setOnFinished((eee) -> {
             try {
-                fxml = FXMLLoader.load(getClass().getResource("SignIN.fxml"));
+                fxml = FXMLLoader.load(getClass().getResource("SignUP.fxml"));
                 vbox.getChildren().removeAll();
                 vbox.getChildren().setAll(fxml);
 
