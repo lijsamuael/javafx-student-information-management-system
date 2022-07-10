@@ -4,10 +4,11 @@ import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
@@ -16,7 +17,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainControllers {
+public class MainControllers implements Initializable {
 
     @FXML
     private Button btngotosignin;
@@ -38,56 +39,59 @@ public class MainControllers {
 
     @FXML
     private VBox vbox;
+    private Parent fxml;
 
-    Parent fxml;
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        TranslateTransition t = new TranslateTransition(Duration.seconds(1.5), vbox);
+        t.setByX(-124.5);
+        t.play();
+        t.setOnFinished((eee) -> {
+            try {
+                 fxml = FXMLLoader.load(getClass().getResource("SignIN.fxml"));
+                vbox.getChildren().removeAll();
+                vbox.getChildren().setAll(fxml);
 
+            } catch (IOException error) {
 
-
-
-    @FXML
-    private void initialize(URL rul, ResourceBundle rb) {
-
+            }
+        });
 
     }
 
     @FXML
-    private void open_signup(ActionEvent e) {
-        TranslateTransition t = new TranslateTransition(Duration.seconds(1), vbox);
+    private void open_signup(ActionEvent e) throws IOException {
+        TranslateTransition t = new TranslateTransition(Duration.seconds(1.5), vbox);
         t.setByX(249);
         t.play();
-        t.setOnFinished((ee) -> {
+        t.setOnFinished((eee) -> {
             try {
-                fxml = FXMLLoader.load(getClass().getResource("Signup.fxml"));
+                fxml = FXMLLoader.load(getClass().getResource("SignIN.fxml"));
                 vbox.getChildren().removeAll();
                 vbox.getChildren().setAll(fxml);
 
-            } catch (IOException er) {
-                System.out.println(er);
+            } catch (IOException error) {
+
             }
         });
-        pnlgotosignup.setVisible(false);
-        pnlgotosignin.setVisible(true);
-
 
     }
 
     @FXML
     private void open_signin(ActionEvent e) {
-        TranslateTransition t = new TranslateTransition(Duration.seconds(2), vbox);
+        TranslateTransition t = new TranslateTransition(Duration.seconds(1.5), vbox);
         t.setByX(-249);
         t.play();
         t.setOnFinished((eee) -> {
             try {
-                fxml = FXMLLoader.load(getClass().getResource("Login.fxml"));
+                fxml = FXMLLoader.load(getClass().getResource("SignIN.fxml"));
                 vbox.getChildren().removeAll();
                 vbox.getChildren().setAll(fxml);
 
-            } catch (IOException er) {
-                System.out.println(er);
+            } catch (IOException error) {
+
             }
         });
-        pnlgotosignin.setVisible(false);
-        pnlgotosignup.setVisible(true);
-
     }
+
 }

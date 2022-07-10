@@ -8,35 +8,41 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.student_information_management_system.MainControllers">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="724.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.student_information_management_system.MainControllers">
    <children>
-      <Pane fx:id="pnlgotosignin" layoutX="-1.0" prefHeight="476.0" prefWidth="249.0" style="-fx-background-color: #660022;">
+      <Pane fx:id="pnlgotosignin" layoutX="-1.0" prefHeight="476.0" prefWidth="724.0" style="-fx-background-color: #660022;">
          <children>
             <Label fx:id="haveanaccount" layoutX="41.0" layoutY="120.0" prefHeight="27.0" prefWidth="181.0" text="Have an account?" textFill="WHITE">
                <font>
                   <Font name="Consolas Bold" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="btngotosignin" layoutX="75.0" layoutY="187.0" mnemonicParsing="false" onAction="#open_signin" prefHeight="37.0" prefWidth="99.0" text="SIGN IN">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </Button>
-            <VBox fx:id="vbox" layoutY="-1.0" prefHeight="476.0" prefWidth="476.0" style="-fx-background-color: LIGHTSKYBLUE;" />
-         </children>
-      </Pane>
-      <Pane fx:id="pnlgotosignup" layoutX="475.0" prefHeight="476.0" prefWidth="249.0" style="-fx-background-color: #660022;">
-         <children>
-            <Label fx:id="nothaveanaccount" layoutX="21.0" layoutY="115.0" prefHeight="27.0" prefWidth="208.0" text="Dont have an account?" textFill="WHITE">
+            <Label fx:id="haveanaccount1" layoutX="41.0" layoutY="163.0" prefHeight="85.0" prefWidth="146.0" text="Join us here if you already signed up" textFill="WHITE" wrapText="true">
                <font>
                   <Font name="Consolas Bold" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="btngotosignup" layoutX="75.0" layoutY="187.0" mnemonicParsing="false" onAction="#open_signup" prefHeight="37.0" prefWidth="99.0" text="SIGN UP">
+            <Button fx:id="btngotosignin" layoutX="50.0" layoutY="292.0" mnemonicParsing="false" onAction="#open_signin" prefHeight="37.0" prefWidth="99.0" text="SIGN IN">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
+            <Label fx:id="nothaveanaccount" layoutX="495.0" layoutY="107.0" prefHeight="27.0" prefWidth="208.0" text="Dont have an account?" textFill="WHITE">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="nothaveanaccount1" layoutX="522.0" layoutY="147.0" prefHeight="85.0" prefWidth="181.0" text="IAre you here for the first time" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btngotosignup" layoutX="563.0" layoutY="292.0" mnemonicParsing="false" onAction="#open_signup" prefHeight="37.0" prefWidth="99.0" text="SIGN UP">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <VBox fx:id="vbox" layoutX="124.0" layoutY="1.0" prefHeight="475.0" prefWidth="463.0" />
          </children>
       </Pane>
    </children>
