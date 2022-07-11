@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="476.0" stylesheets="@signinstylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="476.0" stylesheets="@signinstylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.student_information_management_system.MainControllers">
    <children>
       <Pane prefHeight="117.0" prefWidth="450.0">
          <children>
@@ -24,17 +23,31 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField alignment="BASELINE_RIGHT" blendMode="DARKEN" prefHeight="34.0" prefWidth="255.0" />
+      <TextField fx:id="txtusername">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
       <Label text="PASSWORD" textFill="#660022">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField prefHeight="34.0" prefWidth="255.0" />
-      <Pane prefHeight="48.0" prefWidth="450.0" />
-      <Pane prefHeight="72.0" prefWidth="450.0">
+      <TextField fx:id="txtpassword" prefHeight="34.0" prefWidth="255.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></TextField>
+      <Pane prefHeight="48.0" prefWidth="450.0">
          <children>
-            <Button layoutX="92.0" layoutY="15.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="267.0" style="-fx-background-color: #660022;" text="LOG IN" textFill="WHITE">
+            <Label fx:id="lblerror" layoutX="60.0" layoutY="4.0" prefHeight="40.0" prefWidth="314.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane prefHeight="72.0" prefWidth="450.0" stylesheets="@signinstylesheet.css">
+         <children>
+            <Button fx:id="btnlogin" layoutX="92.0" layoutY="15.0" mnemonicParsing="false" onAction="#login" prefHeight="42.0" prefWidth="267.0" style="-fx-background-color: #660022;" text="LOG IN" textFill="WHITE">
                <font>
                   <Font name="Cambria Bold" size="18.0" />
                </font>
