@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="707.0" prefWidth="1364.0" scaleY="1.1" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="707.0" prefWidth="208.0" style="-fx-background-color: #f07abd; -fx-background-color: purple;">
+         <children>
+            <Label layoutX="62.0" layoutY="200.0" prefHeight="21.0" prefWidth="62.0" text="Admin" textFill="#ebe3e3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="84.0" fitWidth="101.0" layoutX="42.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/photo_2022-06-05_15-09-56.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="204.0" layoutY="33.0" prefHeight="62.0" prefWidth="1161.0" style="-fx-background-color: #3397e8;">
+         <children>
+            <Label layoutX="329.0" layoutY="12.0" prefHeight="27.0" prefWidth="284.0" text="Student Information Management ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="1067.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: #f74578;" text="Logout" />
+         </children>
+      </Pane>
+      <Pane layoutX="204.0" layoutY="82.0" prefHeight="625.0" prefWidth="1161.0">
+         <children>
+            <ImageView fitHeight="528.0" fitWidth="746.0" layoutX="202.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" scaleX="1.55" scaleY="1.17">
+               <image>
+                  <Image url="@../../../images/stud.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="354.0" layoutY="170.0" prefHeight="152.0" prefWidth="321.0" style="-fx-background-color: #0ce1f0;">
+               <children>
+                  <Button layoutY="111.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="321.0" text="Add Student" textFill="#20863d" />
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="403.0" prefHeight="152.0" prefWidth="321.0" style="-fx-background-color: green;">
+               <children>
+                  <Button layoutX="1.0" layoutY="45.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="154.0" text="Update" />
+               </children>
+            </Pane>
+            <Pane layoutX="772.0" layoutY="168.0" prefHeight="152.0" prefWidth="321.0" style="-fx-background-color: #a31c1a;">
+               <children>
+                  <Button layoutY="106.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="321.0" text="Delet Student" />
+               </children>
+            </Pane>
+            <Label layoutX="113.0" layoutY="26.0" prefHeight="27.0" prefWidth="183.0" text="Admin Dashboard">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Pane layoutX="6.0" layoutY="176.0" prefHeight="152.0" prefWidth="321.0" style="-fx-background-color: #e68510;">
+               <children>
+                  <Button layoutX="1.0" layoutY="42.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="146.0" text="Retrieve" textFill="#c91919" />
+               </children>
+            </Pane>
+            <Pane layoutX="370.0" layoutY="399.0" prefHeight="152.0" prefWidth="321.0" style="-fx-background-color: #a31c1a;">
+               <children>
+                  <Button layoutX="-2.0" layoutY="36.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="146.0" text="Delet Student" />
+               </children>
+            </Pane>
+            <Pane layoutX="772.0" layoutY="399.0" prefHeight="152.0" prefWidth="321.0" style="-fx-background-color: #0ce1f0;">
+               <children>
+                  <Button layoutY="41.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="154.0" text="Add Student" textFill="#20863d" />
+               </children>
+            </Pane>
+            <Button layoutX="14.0" layoutY="27.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: #f0e80c;" text="Home" textFill="#280505" />
+         </children>
+      </Pane>
+   </children>
+</Pane>
