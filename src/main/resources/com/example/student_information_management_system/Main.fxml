@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="724.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.student_information_management_system.MainControllers">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="724.0" stylesheets="@mainstylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.student_information_management_system.MainControllers">
    <children>
       <Pane fx:id="pnlgotosignin" layoutX="-1.0" prefHeight="476.0" prefWidth="724.0" style="-fx-background-color: #3f2b63;">
          <children>
@@ -17,32 +17,35 @@
                   <Font name="Consolas Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="haveanaccount1" layoutX="41.0" layoutY="163.0" prefHeight="85.0" prefWidth="146.0" text="Join us here if you already signed up" textFill="WHITE" wrapText="true">
+            <Label fx:id="haveanaccount1" layoutX="41.0" layoutY="163.0" prefHeight="104.0" prefWidth="190.0" text="Join us here if you already signed up" textFill="WHITE" wrapText="true">
                <font>
                   <Font name="Consolas Bold" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="btngotosignin" layoutX="50.0" layoutY="292.0" mnemonicParsing="false" onAction="#open_signin" prefHeight="37.0" prefWidth="99.0" text="SIGN IN">
+            <Button fx:id="btngotosignin" layoutX="50.0" layoutY="292.0" mnemonicParsing="false" onAction="#open_signin" prefHeight="37.0" prefWidth="99.0" style="-fx-background-color: rgb(119, 199, 119);" text="SIGN IN" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Label fx:id="nothaveanaccount" layoutX="495.0" layoutY="107.0" prefHeight="27.0" prefWidth="208.0" text="Dont have an account?" textFill="WHITE">
+            <Label fx:id="nothaveanaccount" layoutX="495.0" layoutY="107.0" prefHeight="42.0" prefWidth="230.0" text="Dont have an account?" textFill="WHITE">
                <font>
                   <Font name="Consolas Bold" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="nothaveanaccount1" layoutX="522.0" layoutY="147.0" prefHeight="85.0" prefWidth="181.0" text="IAre you here for the first time" textFill="WHITE" wrapText="true">
-               <font>
-                  <Font name="Consolas Bold" size="18.0" />
-               </font>
-            </Label>
-            <Button fx:id="btngotosignup" layoutX="563.0" layoutY="292.0" mnemonicParsing="false" onAction="#open_signup" prefHeight="37.0" prefWidth="99.0" text="SIGN UP">
+            <Button fx:id="btngotosignup" layoutX="563.0" layoutY="292.0" mnemonicParsing="false" onAction="#open_signup" prefHeight="37.0" prefWidth="99.0" style="-fx-background-color: rgb(119, 199, 119);" text="SIGN UP" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
             </Button>
-            <VBox fx:id="vbox" layoutX="124.0" layoutY="1.0" prefHeight="475.0" prefWidth="463.0" />
+            <Label fx:id="nothaveanaccount1" layoutX="522.0" layoutY="147.0" prefHeight="104.0" prefWidth="181.0" text="Are you here for the first time" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Consolas Bold" size="18.0" />
+               </font>
+            </Label>
+            <VBox fx:id="vbox" layoutX="124.0" layoutY="1.0" prefHeight="475.0" prefWidth="463.0" style="-fx-background-color: white;" />
          </children>
       </Pane>
    </children>

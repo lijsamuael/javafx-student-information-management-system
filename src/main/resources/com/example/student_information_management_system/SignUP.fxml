@@ -7,41 +7,85 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<<<<<<< HEAD
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="476.0" stylesheets="@signupstylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Pane prefHeight="72.0" prefWidth="451.0">
          <children>
             <Label fx:id="lblsignuphere" layoutX="147.0" layoutY="11.0" stylesheets="@signupstylesheet.css" text="SIGN UP HERE" textFill="#3f2b63">
+=======
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="476.0" stylesheets="@mainstylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.student_information_management_system.MainControllers">
+   <children>
+      <Pane prefHeight="72.0" prefWidth="451.0">
+         <children>
+            <Label fx:id="lblsignuphere" layoutX="147.0" layoutY="11.0" stylesheets="@mainstylesheet.css" text="SIGN UP HERE" textFill="#660022">
+>>>>>>> 967b5269624529ca0bfc37a10bd1c751c5afe0c5
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Label>
          </children>
       </Pane>
+<<<<<<< HEAD
       <Label fx:id="lblusername" stylesheets="@signupstylesheet.css" text="USER NAME" textFill="#3f2b63">
+=======
+      <Label fx:id="lblusername" text="USER NAME" textFill="#660022">
+>>>>>>> 967b5269624529ca0bfc37a10bd1c751c5afe0c5
          <font>
             <Font size="15.0" />
          </font>
       </Label>
+<<<<<<< HEAD
       <TextField fx:id="txtusername" prefHeight="34.0" prefWidth="255.0" stylesheets="@signupstylesheet.css" />
       <Label fx:id="lblemail" stylesheets="@signupstylesheet.css" text="EMAIL" textFill="#3f2b63">
+=======
+      <TextField fx:id="txtusernames" prefHeight="34.0" prefWidth="255.0" promptText="Use your id as a a username">
+         <font>
+            <Font name="Consolas Bold" size="15.0" />
+         </font></TextField>
+      <Label fx:id="lblemail" text="EMAIL" textFill="#660022">
+>>>>>>> 967b5269624529ca0bfc37a10bd1c751c5afe0c5
          <font>
             <Font size="15.0" />
          </font>
       </Label>
+<<<<<<< HEAD
       <TextField fx:id="tetemail" alignment="BASELINE_RIGHT" blendMode="DARKEN" prefHeight="34.0" prefWidth="255.0" stylesheets="@signupstylesheet.css" />
       <Label fx:id="lblpassword" stylesheets="@signupstylesheet.css" text="PASSWORD" textFill="#3f2b63">
+=======
+      <TextField fx:id="txtemails">
+         <font>
+            <Font name="Consolas Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Label fx:id="lblpassword" text="PASSWORD" textFill="#660022">
+>>>>>>> 967b5269624529ca0bfc37a10bd1c751c5afe0c5
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="txtpassword" alignment="BASELINE_RIGHT" blendMode="DARKEN" prefHeight="34.0" prefWidth="255.0" stylesheets="@signupstylesheet.css" />
-      <Pane fx:id="pnlnotify" prefHeight="53.0" prefWidth="450.0" />
+      <TextField fx:id="txtpasswords">
+         <font>
+            <Font name="Consolas Bold" size="15.0" />
+         </font>
+      </TextField>
+      <Pane fx:id="pnlnotify" prefHeight="53.0" prefWidth="450.0">
+         <children>
+            <Label fx:id="lblerror2" layoutX="46.0" textFill="RED">
+               <font>
+                  <Font name="Cambria Bold" size="14.0" />
+               </font>
+            </Label>
+         </children></Pane>
       <Pane prefHeight="44.0" prefWidth="450.0">
          <children>
+<<<<<<< HEAD
             <Button fx:id="btnsignup" layoutX="50.0" layoutY="-2.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="350.0" style="-fx-background-color: #3f2b63;" stylesheets="@signupstylesheet.css" text="SIGN UP" textFill="WHITE">
+=======
+            <Button fx:id="btnsignups" alignment="CENTER" layoutX="50.0" layoutY="-2.0" mnemonicParsing="false" onAction="#signup" prefHeight="48.0" prefWidth="340.0" text="SIGN UP" textFill="WHITE">
+>>>>>>> 967b5269624529ca0bfc37a10bd1c751c5afe0c5
                <font>
-                  <Font name="Cambria Bold" size="18.0" />
+                  <Font name="Consolas Bold" size="18.0" />
                </font>
             </Button>
          </children>
