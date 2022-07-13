@@ -10,7 +10,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="476.0" prefWidth="724.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.student_information_management_system.MainControllers">
    <children>
-      <Pane fx:id="pnlgotosignin" layoutX="-1.0" prefHeight="476.0" prefWidth="724.0" style="-fx-background-color: #660022;">
+      <Pane fx:id="pnlgotosignin" layoutX="-1.0" prefHeight="476.0" prefWidth="724.0" style="-fx-background-color: #3f2b63;">
          <children>
             <Label fx:id="haveanaccount" layoutX="41.0" layoutY="120.0" prefHeight="27.0" prefWidth="181.0" text="Have an account?" textFill="WHITE">
                <font>

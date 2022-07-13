@@ -21,6 +21,8 @@ public class MainControllers implements Initializable {
 
     @FXML
     private Button btngotosignin;
+    @FXML
+    private Button butlog;
 
     @FXML
     private Button btngotosignup;
