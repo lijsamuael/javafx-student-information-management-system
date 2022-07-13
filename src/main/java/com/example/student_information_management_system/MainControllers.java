@@ -6,12 +6,14 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -125,7 +127,7 @@ public class MainControllers implements Initializable {
     }
 
     @FXML
-    void login(ActionEvent event) throws ClassNotFoundException, SQLException {
+    void login(ActionEvent event) throws ClassNotFoundException, SQLException, IOException {
         if(txtusername.getText() == "" || txtpassword.getText() == "") {
 
             lblerror.setText("One or more fieds are empty");
@@ -142,6 +144,13 @@ public class MainControllers implements Initializable {
                 if( txtusername.getText().equals(rs.getString("username")) && txtpassword.getText().equals(rs.getString("password"))) {
 
                     lblerror.setText("Successfull login");
+                    Stage stage = (Stage) btnlogin.getScene().getWindow();
+                    stage.close();
+                    Stage adminpage = new Stage();
+                    Parent root = FXMLLoader.load(getClass().getResource("Admin.fxml"));
+                    adminpage.setScene(new Scene(root, 1355, 768));
+
+                    adminpage.show();
                     count++;
                     break;
 

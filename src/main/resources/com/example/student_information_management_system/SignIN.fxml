@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="476.0" stylesheets="@signinstylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.student_information_management_system.MainControllers">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="476.0" stylesheets="@mainstylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.student_information_management_system.MainControllers">
    <children>
       <Pane prefHeight="117.0" prefWidth="450.0">
          <children>
-            <Label layoutX="140.0" layoutY="29.0" prefHeight="59.0" prefWidth="171.0" text="SIGN IN HERE" textFill="#660022">
+            <Label layoutX="140.0" layoutY="29.0" prefHeight="59.0" prefWidth="171.0" text="SIGN IN HERE">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -25,7 +25,7 @@
       </Label>
       <TextField fx:id="txtusername">
          <font>
-            <Font size="18.0" />
+            <Font name="Consolas Bold" size="18.0" />
          </font>
       </TextField>
       <Label text="PASSWORD" textFill="#660022">
@@ -45,7 +45,7 @@
                </font>
             </Label>
          </children></Pane>
-      <Pane prefHeight="72.0" prefWidth="450.0" stylesheets="@signinstylesheet.css">
+      <Pane prefHeight="72.0" prefWidth="450.0">
          <children>
             <Button fx:id="btnlogin" layoutX="92.0" layoutY="15.0" mnemonicParsing="false" onAction="#login" prefHeight="42.0" prefWidth="267.0" style="-fx-background-color: #660022;" text="LOG IN" textFill="WHITE">
                <font>

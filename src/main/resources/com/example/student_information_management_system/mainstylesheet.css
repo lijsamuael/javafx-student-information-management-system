@@ -1,0 +1,58 @@
+* {
+    -fx-padding: 10px;
+}
+
+.text-field {
+    -fx-border-radius: 20px;
+    -fx-background-color: white;
+    -fx-border-width: 2px;
+    -fx-border-color: #660022;
+}
+
+.textt-field:hover {
+    -fx-border-color: green;
+    -fx-border-width: 3px;
+}
+
+.label {
+    -fx-font-type: bold;
+    -fx-font-weight: bold;
+    -fx-graphic-text-gap: 10;
+}
+
+.button:hover {
+    -fx-background-color: darkgreen;
+}
+
+.pane {
+    -fx-alignment: center;
+    -fx-border-radius: 20px;
+}
+
+#btnlogin {
+    -fx-background-color: #660022;
+}
+
+#btnlogin:hover {
+    -fx-background-color: rgb(119, 199, 119);
+}
+
+#btnsignups {
+    -fx-background-color: #660022;
+}
+
+#btnsignups:hover {
+    -fx-background-color: rgb(119, 199, 119);
+}
+
+#btngotosignup:hover {
+    -fx-background-color: rgb(20, 211, 20);
+}
+
+#btngotosignin:hover {
+    -fx-background-color: rgb(20, 211, 20);
+}
+
+. {
+    color: rgba(44, 28, 104, 0.658);
+}
