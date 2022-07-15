@@ -25,8 +25,6 @@ public class MainControllers implements Initializable {
 
     @FXML
     private Button btngotosignin;
-    @FXML
-    private Button butlog;
 
     @FXML
     private Button btngotosignup;
@@ -56,7 +54,7 @@ public class MainControllers implements Initializable {
     private TextField txtpassword;
 
     @FXML
-    private TextField txtusername;
+    TextField txtusername;
 
     @FXML
     private TextField txtemails;
@@ -72,7 +70,7 @@ public class MainControllers implements Initializable {
 
     @FXML
     private Label lblerror2;
-
+    public static  String renderid;
 
 
     @Override
@@ -82,7 +80,7 @@ public class MainControllers implements Initializable {
         t.play();
         t.setOnFinished((eee) -> {
             try {
-                 fxml = FXMLLoader.load(getClass().getResource("SignIN.fxml"));
+                fxml = FXMLLoader.load(getClass().getResource("SignIN.fxml"));
                 vbox.getChildren().removeAll();
                 vbox.getChildren().setAll(fxml);
 
@@ -144,18 +142,29 @@ public class MainControllers implements Initializable {
 
             while(rs.next()) {
                 if( txtusername.getText().equals(rs.getString("username")) && txtpassword.getText().equals(rs.getString("password"))) {
-
+                    renderid = rs.getString("username");
                     lblerror.setText("Successfull login");
                     Stage stage = (Stage) btnlogin.getScene().getWindow();
                     stage.close();
-                    Stage adminpage = new Stage();
-                    Parent root = FXMLLoader.load(getClass().getResource("Admin.fxml"));
-                    adminpage.setScene(new Scene(root, 1355, 768));
+                    Stage studentpage = new Stage();
+                    Parent root = FXMLLoader.load(getClass().getResource("Stud_Home.fxml"));
+                    studentpage.setScene(new Scene(root));
+                    studentpage.setFullScreen(true);
 
-                    adminpage.show();
+                    studentpage.show();
                     count++;
                     break;
 
+                }
+                else if(txtusername.getText().equals("admin") && txtpassword.getText().equals("admin")){
+                    Stage stage = (Stage) btnlogin.getScene().getWindow();
+                    stage.close();
+                    Stage studentpage = new Stage();
+                    Parent root = FXMLLoader.load(getClass().getResource("Administrator.fxml"));
+                    studentpage.setScene(new Scene(root));
+                    studentpage.setFullScreen(true);
+
+                    studentpage.show();
                 }
 
             }

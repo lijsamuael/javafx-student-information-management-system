@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="707.0" prefWidth="1364.0" scaleY="1.1" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="707.0" prefWidth="1364.0" scaleY="1.1" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.student_information_management_system.adminController">
     <children>
-        <Pane prefHeight="707.0" prefWidth="208.0" style="-fx-background-color: #660022;">
+        <Pane prefHeight="707.0" prefWidth="208.0" style="-fx-background-color: #f07abd; -fx-background-color: purple;">
             <children>
-                <Label layoutX="62.0" layoutY="200.0" prefHeight="21.0" prefWidth="62.0" text="Admin" textFill="#ebe3e3">
+                <Label layoutX="73.0" layoutY="247.0" prefHeight="21.0" prefWidth="62.0" text="Admin" textFill="#ebe3e3">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Label>
-                <ImageView fitHeight="84.0" fitWidth="101.0" layoutX="42.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="84.0" fitWidth="101.0" layoutX="53.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../../images/photo_2022-06-05_15-09-56.jpg" />
                     </image>
@@ -25,57 +29,224 @@
         </Pane>
         <Pane layoutX="204.0" layoutY="33.0" prefHeight="62.0" prefWidth="1161.0" style="-fx-background-color: #3397e8;">
             <children>
-                <Label layoutX="329.0" layoutY="12.0" prefHeight="27.0" prefWidth="284.0" text="Student Information Management ">
+                <Label layoutX="334.0" layoutY="11.0" prefHeight="42.0" prefWidth="348.0" text="Student Information Management System">
                     <font>
                         <Font size="18.0" />
                     </font>
                 </Label>
-                <Button layoutX="1067.0" layoutY="13.0" mnemonicParsing="false" style="-fx-background-color: #f74578;" text="Logout" />
+                <Button fx:id="btnlogout" layoutX="1056.0" layoutY="18.0" mnemonicParsing="false" onAction="#logout" prefHeight="32.0" prefWidth="75.0" style="-fx-background-color: #f74578;" text="Logout" />
             </children>
         </Pane>
         <Pane layoutX="204.0" layoutY="82.0" prefHeight="625.0" prefWidth="1161.0">
             <children>
-                <ImageView fitHeight="528.0" fitWidth="746.0" layoutX="202.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true" scaleX="1.55" scaleY="1.17">
+                <ImageView fitHeight="520.0" fitWidth="745.0" layoutX="204.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" scaleX="1.55" scaleY="1.17">
                     <image>
                         <Image url="@../../../images/stud.jpg" />
                     </image>
                 </ImageView>
-                <Pane layoutX="354.0" layoutY="170.0" prefHeight="152.0" prefWidth="321.0" style="-fx-background-color: #0ce1f0;">
-                    <children>
-                        <Button layoutY="111.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="321.0" text="Add Student" textFill="#20863d" />
-                    </children>
-                </Pane>
-                <Pane layoutX="14.0" layoutY="403.0" prefHeight="152.0" prefWidth="321.0" style="-fx-background-color: green;">
-                    <children>
-                        <Button layoutX="1.0" layoutY="45.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="154.0" text="Update" />
-                    </children>
-                </Pane>
-                <Pane layoutX="772.0" layoutY="168.0" prefHeight="152.0" prefWidth="321.0" style="-fx-background-color: #a31c1a;">
-                    <children>
-                        <Button layoutY="106.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="321.0" text="Delet Student" />
-                    </children>
-                </Pane>
-                <Label layoutX="113.0" layoutY="26.0" prefHeight="27.0" prefWidth="183.0" text="Admin Dashboard">
+                <Label layoutX="128.0" layoutY="19.0" prefHeight="38.0" prefWidth="219.0" text="Admin Dashboard">
                     <font>
-                        <Font size="15.0" />
+                        <Font size="26.0" />
                     </font>
                 </Label>
-                <Pane layoutX="6.0" layoutY="176.0" prefHeight="152.0" prefWidth="321.0" style="-fx-background-color: #e68510;">
+                <Button fx:id="btnhome" layoutX="-1.0" layoutY="12.0" mnemonicParsing="false" onAction="#tohome" prefHeight="46.0" prefWidth="102.0" style="-fx-background-color: #f0e80c;" text="Home" textFill="#280505" />
+                <HBox layoutX="299.0" layoutY="55.0" prefHeight="66.0" prefWidth="261.0" style="-fx-background-color: blue;">
                     <children>
-                        <Button layoutX="1.0" layoutY="42.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="146.0" text="Retrieve" textFill="#c91919" />
+                        <ImageView fitHeight="78.0" fitWidth="65.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/delete.jpg" />
+                            </image>
+                        </ImageView>
+                        <Button fx:id="btnopendelete" mnemonicParsing="false" onAction="#studdelete" prefHeight="78.0" prefWidth="197.0" style="-fx-background-color: #eeccff;" text="Delete Student">
+                            <font>
+                                <Font size="21.0" />
+                            </font>
+                        </Button>
                     </children>
-                </Pane>
-                <Pane layoutX="370.0" layoutY="399.0" prefHeight="152.0" prefWidth="321.0" style="-fx-background-color: #a31c1a;">
+                </HBox>
+                <HBox layoutX="575.0" layoutY="56.0" prefHeight="66.0" prefWidth="250.0" style="-fx-background-color: blue;">
                     <children>
-                        <Button layoutX="-2.0" layoutY="36.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="146.0" text="Delet Student" />
+                        <ImageView fitHeight="66.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/retrive.png" />
+                            </image>
+                        </ImageView>
+                        <Button fx:id="btnopenretrieve" mnemonicParsing="false" onAction="#sudretrieve" prefHeight="66.0" prefWidth="187.0" style="-fx-background-color: #b5ff9e;" text="Retrieve">
+                            <font>
+                                <Font size="21.0" />
+                            </font>
+                        </Button>
                     </children>
-                </Pane>
-                <Pane layoutX="772.0" layoutY="399.0" prefHeight="152.0" prefWidth="321.0" style="-fx-background-color: #0ce1f0;">
+                </HBox>
+                <HBox layoutX="838.0" layoutY="56.0" prefHeight="66.0" prefWidth="311.0" style="-fx-background-color: blue;">
                     <children>
-                        <Button layoutY="41.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="154.0" text="Add Student" textFill="#20863d" />
+                        <ImageView fitHeight="65.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/update.png" />
+                            </image>
+                        </ImageView>
+                        <Button fx:id="btnopenupdate" mnemonicParsing="false" onAction="#studupdate" prefHeight="66.0" prefWidth="314.0" style="-fx-background-color: #0ce1f0;" text="Update">
+                            <font>
+                                <Font size="21.0" />
+                            </font>
+                        </Button>
                     </children>
-                </Pane>
-                <Button layoutX="14.0" layoutY="27.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: #f0e80c;" text="Home" textFill="#280505" />
+                </HBox>
+                <HBox layoutY="56.0" opacity="0.74" prefHeight="68.0" prefWidth="278.0" style="-fx-background-color: blue;">
+                    <children>
+                        <ImageView fitHeight="68.0" fitWidth="68.0" opacity="0.36" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/add.jpg" />
+                            </image>
+                        </ImageView>
+                        <Button fx:id="btnopenadd" ellipsisString="" mnemonicParsing="false" onAction="#studadd" prefHeight="66.0" prefWidth="210.0" style="-fx-background-color: #e68510;" text="Add Student" textAlignment="CENTER" textFill="#070707">
+                            <font>
+                                <Font size="21.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </HBox>
+                <StackPane layoutX="245.0" layoutY="140.0" prefHeight="480.0" prefWidth="545.0" style="-fx-background-color: grey;">
+                    <children>
+                        <Pane fx:id="retrivepane" accessibleText="M" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="545.0" style="-fx-background-color: #73b9ff;">
+                            <children>
+                                <Label layoutX="105.0" layoutY="67.0" prefHeight="50.0" prefWidth="380.0" text="Retrieve Student Records" textFill="#001707">
+                                    <font>
+                                        <Font size="33.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="rtid" layoutX="169.0" layoutY="215.0" onAction="#retrieve" prefHeight="35.0" prefWidth="240.0" />
+                                <Label layoutX="169.0" layoutY="159.0" prefHeight="17.0" prefWidth="43.0" text="ID">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="btnretrivestudent" layoutX="243.0" layoutY="272.0" mnemonicParsing="false" onAction="#retrieve" prefHeight="35.0" prefWidth="75.0" text="Retrieve" />
+                            </children>
+                        </Pane>
+                        <Pane fx:id="insertpane" accessibleText="M" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="545.0" style="-fx-background-color: #9bf2e4;">
+                            <children>
+                                <Label layoutX="124.0" layoutY="32.0" prefHeight="50.0" prefWidth="341.0" text="Insert Student Records" textFill="#09a5ff">
+                                    <font>
+                                        <Font size="33.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="inage" layoutX="188.0" layoutY="150.0" prefHeight="29.0" prefWidth="213.0" />
+                                <Label layoutX="122.0" layoutY="150.0" prefHeight="17.0" prefWidth="43.0" text="Age">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="inid" layoutX="188.0" layoutY="105.0" prefHeight="29.0" prefWidth="213.0" />
+                                <Label layoutX="133.0" layoutY="105.0" prefHeight="17.0" prefWidth="43.0" text="ID">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="infname" layoutX="188.0" layoutY="194.0" prefHeight="29.0" prefWidth="213.0" />
+                                <Label layoutX="52.0" layoutY="194.0" prefHeight="35.0" prefWidth="141.0" text="First Name">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="inlname" layoutX="188.0" layoutY="238.0" prefHeight="29.0" prefWidth="213.0" />
+                                <Label layoutX="62.0" layoutY="238.0" prefHeight="35.0" prefWidth="121.0" text="Last Name">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="indept" layoutX="188.0" layoutY="325.0" prefHeight="29.0" prefWidth="213.0" />
+                                <Label layoutX="112.0" layoutY="280.0" prefHeight="17.0" prefWidth="43.0" text="Sex">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="52.0" layoutY="374.0" prefHeight="35.0" prefWidth="121.0" text="Acc.Year">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="inbatch" layoutX="188.0" layoutY="374.0" prefHeight="29.0" prefWidth="213.0" />
+                                <Label layoutX="48.0" layoutY="325.0" text="Department">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="btnaddstudent" layoutX="248.0" layoutY="426.0" mnemonicParsing="false" onAction="#add" prefHeight="35.0" prefWidth="75.0" text="Add" />
+                                <TextField fx:id="insex" layoutX="188.0" layoutY="284.0" prefHeight="29.0" prefWidth="213.0" />
+                            </children>
+                        </Pane>
+                        <Pane fx:id="deletepane" accessibleText="M" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="545.0" style="-fx-background-color: #ed5007;">
+                            <children>
+                                <Label layoutX="106.0" layoutY="51.0" prefHeight="50.0" prefWidth="380.0" text="Delet Student Record" textFill="#0f0b1e">
+                                    <font>
+                                        <Font size="33.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="delid" layoutX="207.0" layoutY="204.0" prefHeight="35.0" prefWidth="213.0" />
+                                <Label layoutX="148.0" layoutY="204.0" prefHeight="17.0" prefWidth="43.0" text="ID">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="btndeletstudent" layoutX="276.0" layoutY="267.0" mnemonicParsing="false" onAction="#delet" prefHeight="35.0" prefWidth="75.0" text="Delete" />
+                            </children>
+                        </Pane>
+                        <Pane fx:id="updatepane" accessibleText="M" prefHeight="502.0" prefWidth="533.0" style="-fx-background-color: #dcf26b;">
+                            <children>
+                                <Label layoutX="155.0" layoutY="20.0" prefHeight="50.0" prefWidth="284.0" text="Update Student Records" textFill="#1c1e1e">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="upage" layoutX="183.0" layoutY="123.0" prefHeight="26.0" prefWidth="213.0" />
+                                <Label layoutX="123.0" layoutY="118.0" prefHeight="17.0" prefWidth="43.0" text="Age">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="upid" layoutX="183.0" layoutY="82.0" prefHeight="26.0" prefWidth="213.0" promptText="Inter student id you want to update" />
+                                <Label layoutX="133.0" layoutY="81.0" prefHeight="17.0" prefWidth="43.0" text="ID">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="upfname" layoutX="183.0" layoutY="161.0" prefHeight="23.0" prefWidth="213.0" />
+                                <Label layoutX="53.0" layoutY="156.0" prefHeight="35.0" prefWidth="141.0" text="First Name">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="uplname" layoutX="183.0" layoutY="200.0" prefHeight="26.0" prefWidth="213.0" />
+                                <Label layoutX="51.0" layoutY="196.0" prefHeight="35.0" prefWidth="121.0" text="Last Name">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="updept" layoutX="183.0" layoutY="288.0" prefHeight="26.0" prefWidth="213.0" />
+                                <Label layoutX="112.0" layoutY="241.0" prefHeight="17.0" prefWidth="43.0" text="Sex">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="52.0" layoutY="322.0" prefHeight="35.0" prefWidth="121.0" text="Acc.Year">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="upbatch" layoutX="183.0" layoutY="327.0" prefHeight="18.0" prefWidth="213.0" />
+                                <Label layoutX="48.0" layoutY="287.0" text="Department">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="upsex" layoutX="183.0" layoutY="245.0" prefHeight="26.0" prefWidth="213.0" />
+                                <Button fx:id="btnupdatestudent" layoutX="252.0" layoutY="371.0" mnemonicParsing="false" onAction="#update" prefHeight="35.0" prefWidth="75.0" text="Update" />
+                            </children>
+                        </Pane>
+                    </children>
+                </StackPane>
+                <FontAwesomeIcon glyphName="HOME" layoutX="14.0" layoutY="39.0" size="1.5em" wrappingWidth="21.142857551574707" />
             </children>
         </Pane>
     </children>

@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.student_information_management_system.Stud_controller">
@@ -20,11 +22,28 @@
          <children>
             <Pane prefHeight="135.0" prefWidth="254.0">
                <children>
-                  <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="14.0" layoutY="79.0" size="60" wrappingWidth="38.28571319580078" />
-                  <Label layoutX="60.0" layoutY="35.0" prefHeight="52.0" prefWidth="181.0" text="Askuala" textFill="WHITE">
+                  <Label layoutX="14.0" layoutY="45.0" prefHeight="60.0" prefWidth="201.0" text="Askuala" textFill="WHITE">
                      <font>
                         <Font name="Forte" size="40.0" />
                      </font>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.05000000074505806" green="1.0" blue="0.918571412563324" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" size="60" wrappingWidth="38.28571319580078">
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color red="0.019999999552965164" green="1.0" blue="0.9626666903495789" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                        </FontAwesomeIcon>
+                     </graphic>
                   </Label>
                </children></Pane>
             <Button id="stpro" fx:id="btnprofile" mnemonicParsing="false" onAction="#clickOn" prefHeight="52.0" prefWidth="256.0" stylesheets="@Homestyle.css" text="Student Profile" textFill="WHITE">
@@ -94,24 +113,6 @@
       <VBox layoutX="254.0" layoutY="400.0" prefHeight="84.0" prefWidth="523.0" style="-fx-background-color: gray;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="0.0" />
       <StackPane layoutX="254.0" layoutY="177.0" AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="254.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="183.0">
          <children>
-            <VBox fx:id="gradepan" onDragDetected="#clickOn" prefHeight="388.0" prefWidth="520.0">
-               <children>
-                  <TableView prefHeight="320.0" prefWidth="520.0">
-                     <columns>
-                        <TableColumn prefWidth="75.0" text="Courses" />
-                        <TableColumn prefWidth="75.0" text="15" />
-                        <TableColumn prefWidth="75.0" text="15" />
-                        <TableColumn prefWidth="75.0" text="20" />
-                        <TableColumn prefWidth="75.0" text="50" />
-                        <TableColumn prefWidth="75.0" text="100" />
-                        <TableColumn prefWidth="75.0" text="Grade" />
-                     </columns>
-                     <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
-                     </columnResizePolicy>
-                  </TableView>
-               </children>
-            </VBox>
             <VBox fx:id="coursepan" onDragDetected="#clickOn" prefHeight="288.0" prefWidth="520.0" style="-fx-background-color: #fff;">
                <children>
                   <TableView prefHeight="320.0" prefWidth="520.0">
@@ -148,19 +149,98 @@
                   </Label>
                </children>
             </VBox>
+            <VBox fx:id="gradepan" onDragDetected="#clickOn" prefHeight="388.0" prefWidth="520.0">
+               <children>
+                  <TableView prefHeight="320.0" prefWidth="520.0">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="Courses" />
+                        <TableColumn prefWidth="75.0" text="15" />
+                        <TableColumn prefWidth="75.0" text="15" />
+                        <TableColumn prefWidth="75.0" text="20" />
+                        <TableColumn prefWidth="75.0" text="50" />
+                        <TableColumn prefWidth="75.0" text="100" />
+                        <TableColumn prefWidth="75.0" text="Grade" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </VBox>
             <VBox fx:id="propane" onDragDetected="#clickOn" prefHeight="288.0" prefWidth="520.0" style="-fx-background-color: #f5f5f5;">
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER">
-                     <image>
-                        <Image url="@../../../images/pngtree-user-cartoon-girl-avatar-png-image_4492903.PNG" />
-                     </image>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </ImageView>
+                  <Pane prefHeight="233.0" prefWidth="520.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/pngtree-user-cartoon-girl-avatar-png-image_4492903.PNG" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="idname" layoutX="247.0" layoutY="41.0" prefHeight="52.0" prefWidth="269.0">
+                           <font>
+                              <Font name="System Bold" size="23.0" />
+                           </font>
+                           <effect>
+                              <Reflection bottomOpacity="0.38" fraction="0.24" topOpacity="1.0" />
+                           </effect>
+                        </Label>
+                        <Label fx:id="iddept" layoutX="247.0" layoutY="93.0">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="idid" layoutX="247.0" layoutY="130.0">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="141.0" layoutY="168.0" prefHeight="26.0" prefWidth="68.0" text="Batch : ">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="147.0" layoutY="54.0" text="Name :">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="149.0" layoutY="93.0" text="Dept. :">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="175.0" layoutY="130.0" prefHeight="26.0" prefWidth="28.0" text="ID :">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="idbatch" layoutX="247.0" layoutY="168.0">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
                </children>
             </VBox>
          </children>
       </StackPane>
+      <Label layoutX="315.0" layoutY="43.0">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="26.0" prefHeight="45.0" prefWidth="454.0" text="WELLCOME TO  ASKUALA SIMS" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="32.0" />
+         </font>
+         <effect>
+            <DropShadow height="13.424999999999999" radius="4.32125" spread="0.25" width="5.86">
+               <color>
+                  <Color red="0.08460000157356262" green="0.7852133512496948" blue="0.9399999976158142" opacity="0.9599999785423279" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
    </children>
 </AnchorPane>
