@@ -1,6 +1,7 @@
 .button
 {
-    -fx-background-color:  #3F2B63;
+    -fx-background-color: transparent;
+
 }
 .button:hover
 {
@@ -11,4 +12,12 @@
 .button:pressed
 {
     -fx-background-color:  #7156DD;
+}
+#leftpane
+{
+    -fx-background-color: linear-gradient(to bottom,#3F2B63,#000);
+}
+#Title
+{
+    -fx-background-color: linear-gradient(to right,#3F2B63,#000);
 }

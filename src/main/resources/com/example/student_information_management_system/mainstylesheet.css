@@ -56,3 +56,6 @@
 . {
     color: rgba(44, 28, 104, 0.658);
 }
+.chekbox{
+-fx-font-size: 5px;
+}

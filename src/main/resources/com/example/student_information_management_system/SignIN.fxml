@@ -13,7 +13,7 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="476.0" stylesheets="@mainstylesheet.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.student_information_management_system.MainControllers">
     <children>
-        <Pane prefHeight="117.0" prefWidth="450.0">
+        <Pane prefHeight="105.0" prefWidth="456.0">
             <children>
                 <Label layoutX="140.0" layoutY="29.0" prefHeight="59.0" prefWidth="171.0" text="SIGN IN HERE">
                     <font>
